@@ -1,7 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-
-# ƒVƒ“ƒ{ƒŠƒbƒNƒŠƒ“ƒN‚ð’£‚é
+# ã‚·ãƒ³ãƒœãƒªãƒƒã‚¯ãƒªãƒ³ã‚¯ã‚’å¼µã‚‹
 DOT_FILES=( .vimrc .vim )
 if [ -e $HOME/dotbk ]; then
   rm -r -f $HOME/dotbk
@@ -16,7 +15,5 @@ do
   ln -s $HOME/dotfiles/$file $HOME/$file
 done
 
-# Git‚©‚çƒŠƒ|ƒWƒgƒŠ‚ðŽæ“¾
- 
+# Gitã‹ã‚‰ãƒªãƒã‚¸ãƒˆãƒªã‚’å–å¾—
 [ ! -d ~/.vim/dein ] && mkdir -p ~/.vim/dein && git clone https://github.com/Shougo/dein.vim.git ~/.vim/dein/repos/github.com/Shougo/dein.vim && echo "you should run following command to setup plugins ->  vim -c ':call dein#install()'"
-

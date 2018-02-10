@@ -1,5 +1,3 @@
-﻿echo 'start of vimrc'
-
 "===========================================================
 " Plugins (dein)
 "===========================================================
@@ -32,10 +30,9 @@ endif
 filetype plugin indent on
 syntax enable
 
-echo  dein#check_install()
 if dein#check_install()
   echo 'Install Needed'
-  call dein#install()
+  :silent! call dein#install()
 endif
 
 
@@ -61,10 +58,10 @@ scriptencoding utf-8 " マルチバイト文字の利用時の設定(日本語�
 set autoread " 外部でファイルに変更がされた場合は読みなおす
 set confirm " 保存されていないファイルがあるとき、終了前に保存確認
 set hidden " 保存されていないファイルがあるときでも、保存しないで他のファイルを表示
-set nobackup " backupファイルを作らない, nobackupの場合は、上書きに成功したら削除される
-set backupdir=./backup " backupファイルディレクトリ
-set writebackup " ファイルの上書きの前にbackupファイルを作る
-set noswapfile " swapファイルを作らない
+" set nobackup " backupファイルを作らない, nobackupの場合は、上書きに成功したら削除される
+" set backupdir=./backup " backupファイルディレクトリ
+" set writebackup " ファイルの上書きの前にbackupファイルを作る
+" set noswapfile " swapファイルを作らない
 " set directory=./swap " swapファイルディレクトリ
 
 "" コマンド補助

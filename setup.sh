@@ -1,4 +1,5 @@
-#!/bin/bash
+﻿#!/bin/bash
+
 
 # シンボリックリンクを張る
 DOT_FILES=( .vimrc .vim )
@@ -16,4 +17,6 @@ do
 done
 
 # Gitからリポジトリを取得
+ 
 [ ! -d ~/.vim/dein ] && mkdir -p ~/.vim/dein && git clone https://github.com/Shougo/dein.vim.git ~/.vim/dein/repos/github.com/Shougo/dein.vim && echo "you should run following command to setup plugins ->  vim -c ':call dein#install()'"
+
